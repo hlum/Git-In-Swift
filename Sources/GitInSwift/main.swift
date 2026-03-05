@@ -12,7 +12,8 @@ guard let command = args.first else {
 
 switch command {
     case "init":
-        print("git-swift init - not implemented yet")
+    runInit(args: Array(args.dropFirst()))
     default:
         print("git-swift: \(command): is not a git-swift command.")
+        exit(1)
 }
