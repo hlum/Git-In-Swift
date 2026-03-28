@@ -11,9 +11,11 @@ guard let command = args.first else {
 }
 
 switch command {
-    case "init":
+case "init":
     runInit(args: Array(args.dropFirst()))
-    default:
-        print("git-swift: \(command): is not a git-swift command.")
-        exit(1)
+case "add":
+    runAdd(args: Array(args.dropFirst()))
+default:
+    print("git-swift: \(command): is not a git-swift command.")
+    exit(1)
 }
